@@ -3,170 +3,65 @@
 @import '../mixins/responsive';
 @import '../mixins/font_mix';
 
-header{
+#header_id{
 
-    .header_box{
-        // border:$border;
-        position: relative;
-        width: 1110px;
-        height: 100px;
-        margin: auto;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .brand_name{
 
-        @include custom_responsive(320px, 1399.9px){
-            width: 85vw;
+            h2{
+                font-size: 30px;
+                line-height: 60px;
+                color: #636666;
+                font-family: "Basic Sans Serif7"; 
+                text-transform: uppercase;           
+            }
         }
 
-        body.dark & {
-            background-color: $black;
-            color: $white;
-        }
-
-        .header_logo{
-        // @include border();
-
-            position: absolute;
-            left: 7px;
-            top: 50%;
-            transform: translateY(-50%);
+        .quick_menu{
             display: flex;
-            flex-shrink: 0px;
-            gap: 15px;
+            align-items: center;
 
-            
-
-            img{
-                width: 36px;
-                height: 36px;
-                
-                body.dark & {  
-                    filter: invert(100%);
-                }
-            }
-
-            h3{
-                @include font($heading_text,$poppins, 
-                20px, normal, 700);
-                // all 5 below are included above :)
-                // color: $heading_text;
-                // font-family: $poppins;
-                // font-size: 20px;
-                // font-style: normal;
-                // font-weight: 700;
-                line-height: 35px;
-                letter-spacing: 1.5px;
-
-                body.dark & {  
-                    color: $white;
-                }
-            }
-
-        }
-
-        .change_button{
-
-                    position: absolute;
-                    left: 150px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border-radius: 26.5px;
-                    background-color: $brand_deep;
-                    width: 150px;
-                    height: 28px;
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;                
-                    color: $white;
-
-                    @include custom_responsive(0px, 991.9px){
-                    height:22px ;
-                    font-size: 14px;
-                    left: 10px;
-                    top: 2px;
-                    transform: translateY(0%);                  
-                    }
-        }
-
-        .header_nav{
-            // border: $border;
-            position: absolute;
-            left: 488px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 555;
-
-            @include custom_responsive(576px, 1399.9px){
-                left: 60%;
-                transform: translateX(-50%) translateY(-50%);
-                
-            }
-            @include custom_responsive(0px,767.9px){
+            @include custom_responsive(0px, 768px){
                 display: none;
             }
-
             ul{
+                // @include border();
                 display: flex;
-                gap: 56px;
-                padding: 12px;
-
-                @include custom_responsive(576px, 800.9px){
-                    gap: 15px;
-                }
-
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 50px;
                 li{
-                    list-style-type: none;                  
-                    text-transform: uppercase;         
+                    &:nth-child(4) a{
+                        background-color: transparent;
+                        border: 1px solid $brand_lt;
+                        border-radius: 30px;
+                        color: $brand_lt;
+                        font-size: 12;
+                        font-weight: 500;
+                        padding: 8px 30px;
 
-                    a{
-                        @include font($heading_text,$poppins, 
-                        12px, normal, 400);
-                        // all 5 below are included above :)
-                        // color: $heading_text;
-                        // font-family: Poppins;
-                        // font-size: 12px;
-                        // font-style: normal;
-                        // font-weight: 400;
-                        line-height: 23px;
-                        letter-spacing: 1.5px;
-                       
-                        body.dark & {  
+                        &:hover{
+
+                            background-color: $brand_lt;
                             color: $white;
                         }
+                    
+
+                    }
+                    a{
+                        font-size: 14px;
+                        // line-height: 39px;
+                        color: $black;
+                        font-weight: 500;
+                        font-family: $roboto;                                               
                     }
                 }
             }
         }
-
-        .header_search_bar{
-            // border: $border;
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 555;
-            
-            @include xs(){
-            right: 70px;
-            }
-            @include sm(){
-            right: 70px;
-            }
-
-            a{
-                height: 24px;
-                width: 24px;
-                i{
-                    font-size: 24px;
-                    color: $heading_text;
-
-                    body.dark & {  
-                    color: $white;
-                    }
-                }
-            }
-        }
-
-        
     }
+  
 }
 
 

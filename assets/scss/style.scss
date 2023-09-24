@@ -1,37 +1,24 @@
-@import "./pages/index";
-@import "./pages/about";
-@import "./pages/contact";
+
+@import "./core/reset";
+@import "./core/typography";
 @import "./abstracts/variables";
 @import "./components/buttons";
 @import "./layouts/headers";
 @import "./layouts/footers";
+@import "./layouts/nav";
+@import "./layouts/nav_button";
+@import "./layouts/container";
 @import "./mixins/responsive";
 @import "./mixins/mix_button";
+@import "./pages/index";
+@import "./pages/about";
+@import "./pages/contact";
 
 
 body{
-    padding: 5px;
+    // padding: 5px;
     background-color: skyblue;
     height: 100vh;
-}
-.temp{
+    overflow: hidden;
     
-    text-align: center;
-
-    .temp_heading {
-        color: $red;
-        text-align: center;
-        // align-items: center;
-    }
-
-    .temp_subheading{
-        color: $green;
-        text-align: center;
-        // align-items: center;
-    }
-    p{
-        font-size: 18px;
-        color: $grey;
-        text-align: center;
-    }
 }

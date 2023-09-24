@@ -1,21 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME  CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- STYLE  -->
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <title>Home_page</title>
+    <title>Craft-Lance</title>
 </head>
-<body>
-    <div class="temp">
-        <h1 class="temp_heading">
-            Fi_Amanillah
-        </h1>
-        <h3 class="temp_subheading">
-            In the custody of Allah.
-        </h3>
-        <p>HTML Boiler Plate with full set up (scss, sass, postcss etc.) editable to begin a project.</p>
 
-    </div>
+<body class="">
+
+    <nav id="nav_id">
+        <div class="container">
+            <div class="social_icons">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <div class="phone_box">
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#">+44 99128356644</a>
+                </div>
+                <div class="email_box">
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#">contact@cl.com</a>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+     
+
+    <header id="header_id">
+        <div class="container">
+            <!-- HIDDEN NAVBAR  -->
+
+            <div id="nav_box" class="">
+                <ul class="nav_list">
+
+                    <a id="nav_close_mark" class="" href="#"><i onclick="nav_box.classList.remove('active_nav')"  class="fa-solid fa-xmark"></i></a>
+
+                    
+                    <li><a href="#">product</a></li>
+                    <li><a href="#">solutions</a></li>
+                    <li><a href="#">support</a></li>
+                    <li><a href="#">sign in</a></li>
+                    
+
+                </ul>
+            </div>
+            <div class="brand_name">
+                <h2>carft lance</h2>
+            </div>
+            <div class="quick_menu">
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a class="button" href="#">Sign in</a></li>
+                </ul>
+            </div>
+            <!-- HIDDEN NAV ICON  -->
+            <div class="nav_icon">
+                <a href="#"><i onclick="nav_box.classList.add('active_nav')" class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+    </header>
+
+
+    <script src="./assets/js/nav_bar.js"></script>
 </body>
+
 </html>

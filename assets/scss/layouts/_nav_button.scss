@@ -1,92 +1,120 @@
 @import '../abstracts/variables';
 @import '../mixins/common_mix';
 @import '../mixins/responsive';
-
-#nav_bar {
-
-    
-    display: none;
-    position: absolute;
-    right: -250px;
-    top: 22px;
-    height: 400px;
-    width: 200px;
-    // transform: scale(0);
-    border-radius: 10px;
-    background-color: rgba(9, 75, 114, 0.591);
-    backdrop-filter: blur(10px);
-    transition-duration: right 0.4s;
-    z-index: 999;
-
-    @include custom_responsive(0px, 768px){
-        display: block;
-    }
-
-    &.active_nav {
-        right: 15px;
-    }
-
-    #nav_close_mark {
-
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-        i {
-            font-size: 40px;
-            color: $white;
-        }
-    }
-
-    ul {
+@import '../mixins/font_mix';
 
 
-        li {
-            margin: 50px 30px;
 
-            a {
-                @include font($white, $poppins, 18px, normal, 400);
-                text-transform: uppercase;
-
-            }
-        }
-    }
-}
-
-.header_box {
-
-    .nav_icon {
-        display: none;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 30px;
-
+#header_id{
+    .container{
+        position: relative;
         
-
-        @include xs() {
-            display: inline-block;
+        #nav_box {
+        
+            
+            display: none;
             position: absolute;
-
-
-
-        }
-
-        @include sm() {
-            display: inline-block;
-            position: absolute;
-
-        }
-
-        a {
-
-            i {
-                font-size: 24px;
-                color: $brand_deep;
-
-                body.dark & {  
+            right: -300px;
+            top: 22px;
+            height: 400px;
+            width: 200px;
+            // transform: scale(0);
+            border-radius: 10px;
+            background-color: rgba(9, 75, 114, 0.591);
+            backdrop-filter: blur(10px);
+            transition-duration: right 0.4s;
+            z-index: 999;
+        
+            @include custom_responsive(0px, 768px){
+                display: block;
+            }
+        
+            &.active_nav {
+                right: 5px;
+                
+            }
+        
+            #nav_close_mark {
+        
+                position: absolute;
+                top: 10px;
+                right: 10px;
+        
+                i {
+                    font-size: 40px;
                     color: $white;
                 }
             }
+        
+            ul {
+        
+        
+                li {
+                    margin: 50px 30px;
+                    
+                    &:nth-child(5) a{
+                        background-color: transparent;
+                        border: 1px solid $brand_lt;
+                        border-radius: 30px;
+                        color: $brand_lt;
+                        font-size: 12;
+                        font-weight: 500;
+                        padding: 8px 30px;
+
+                        &:hover{
+
+                            background-color: $brand_lt;
+                            color: $white;
+                        }}
+
+                    a {
+                        text-transform: uppercase;
+                        color: $white;
+                        font-family: $roboto;
+
+                        
+        
+                    }
+                }
+            }
         }
+        
+        
+        
+            .nav_icon {
+                display: none;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30px;
+        
+                
+        
+                @include xs() {
+                    display: inline-block;
+                    position: absolute;
+        
+        
+        
+                }
+        
+                @include sm() {
+                    display: inline-block;
+                    position: absolute;
+        
+                }
+        
+                a {
+        
+                    i {
+                        font-size: 24px;
+                        color: $brand_dp;
+        
+                        body.dark & {  
+                            color: $white;
+                        }
+                    }
+                }
+            }
     }
 }
+

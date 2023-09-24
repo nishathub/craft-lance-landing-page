@@ -1,0 +1,76 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+@import '../mixins/font_mix';
+
+#nav_id{
+    background-color: $black;
+    .container{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            @include font(#fefefe,13px,$wt:300,$lh: 39px);
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+    }
+
+    .social_icons{
+
+        ul{
+
+            li{
+
+                a{
+
+                    i{
+
+
+                    }
+                }
+            }
+        }
+    }
+
+    .contact{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+
+        @include custom_responsive(0px, 576px){
+            gap: 0px;
+            flex-direction: column;
+        }
+        
+        .phone_box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            a{
+                // @include font($white,13px,$wt:300,$lh: 39px);
+
+                i{
+                    
+                }
+            }
+        }
+
+        .email_box{
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            a{
+                i{
+
+                }
+            }
+        }
+    }
+}

@@ -3,15 +3,15 @@
 
 
 //                         (bg_color, border)
-.btn_1{
-    @include master_button($red, $green);
-}
-.btn_2{
-    @include master_button($blue, $black);
-}
-.btn_3{
-    @include master_button($white, $grey);
-}
+// .btn_1{
+//     @include master_button($red, $green);
+// }
+// .btn_2{
+//     @include master_button($blue, $black);
+// }
+// .btn_3{
+//     @include master_button($white, $grey);
+// }
 
 @mixin n_btn($border:  red, $txt_c: $white, $bg_c: $black, $radius: 35px){
     border:1px solid $border;

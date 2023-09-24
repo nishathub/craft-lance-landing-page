@@ -1,0 +1,35 @@
+@import "../abstracts/variables";
+@import "../mixins/mix_button";
+
+
+//                         (bg_color, border)
+.btn_1{
+    @include master_button($red, $green);
+}
+.btn_2{
+    @include master_button($blue, $black);
+}
+.btn_3{
+    @include master_button($white, $grey);
+}
+
+@mixin n_btn($border:  red, $txt_c: $white, $bg_c: $black, $radius: 35px){
+    border:1px solid $border;
+    color: $txt_c;
+    background-color: $bg_c;
+    border-radius: $radius;
+    padding: 8px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: roboto;
+  }
+  
+  @mixin btn_outline($border: red, $bg: transparent){
+    border: 1px solid $border;
+    background-color: $bg;
+  }
+  @mixin btn_fill($txt: red, $bg: blue){
+    border: unset;
+    color: $txt;
+    background-color: $bg;
+  }

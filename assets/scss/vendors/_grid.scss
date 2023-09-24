@@ -1,0 +1,39 @@
+
+
+$total_grid: 12;
+$grid_size: (100%/$total_grid);
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@mixin make_col($screen_name: false){
+    @for $col-no from 1 through $total_grid {
+        @if $screen_name{
+            .col-#{$screen_name}-#{$col-no}{
+                -webkit-flex-basis: $grid_size* $col-no;
+                flex-basis: $grid_size* $col-no;
+                width: $grid_size* $col-no;
+            }
+        }
+        @else {
+            .col-#{$col-no}{
+                -webkit-flex-basis: $grid_size* $col-no;
+                flex-basis: $grid_size* $col-no;
+                width: $grid_size* $col-no;
+            }
+        }
+      }
+}
+
+@include make_col();
+
+$break_points:( "null":0px, "xs": 320px, "sm": 576px, "md": 768px, "lg": 992px, "xl": 1200px, "xxl": 1400px);
+
+@each $screen_name, $screen_size in $break_points{
+    @media (min-width: $screen_size) {
+        @include make_col($screen_name)
+    }
+}

@@ -15,6 +15,15 @@
     color: $black;
     font-weight: 300;
     font-family: $roboto;
+
+    
+    @include custom_responsive(768px,1080px){
+        font-size: 40px;
+    }
+    @include custom_responsive(0px, 767.9px){
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
 
 @mixin f_h_txt(){

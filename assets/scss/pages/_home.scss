@@ -1,0 +1,156 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+
+#registration{
+background-color: $white;
+    .container{
+
+        .register_div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            margin: 100px 0px;
+            h2{
+                @include h_txt();
+                margin-bottom: 40px;
+            }
+
+            .process{
+                margin-bottom: 40px;
+                height: 260px;
+                width: 630px;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                
+                @include card(white);
+
+                
+                @include custom_responsive(0px, 767.9px){
+                    width: 70vw;
+                }
+                .left{
+
+                    @include custom_responsive(0px, 575.9px){
+                        display: none;
+                    }
+
+                    i{
+
+                        font-size: 60px;
+                        color: $brand_lt;
+                       
+                    @include custom_responsive(0px, 767.9px){
+                        font-size: 40px;
+                    }
+                    }
+                }
+
+                .right{
+
+                    .arrow{
+                        margin-bottom: 35px;
+
+                        
+                    
+                    @include custom_responsive(0px, 767.9px){
+                        margin-bottom: 25px;
+                    }
+
+                        display: flex;
+                        flex-direction: column;
+
+                        i{
+                            font-size: 25px;
+                            color: gray;
+                            line-height: 18px;
+                        }
+                    }
+
+                    h4{
+                        margin-bottom: 20px;
+                        font-size: 26px;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        color: $brand_lt;
+                        font-weight: 250;      
+                        
+                        
+                    @include custom_responsive(0px, 767.9px){
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                    }
+
+                    ul{
+
+                        li{
+                            font-size: 16px;
+                            line-height: 28px;
+                            color: #333333;
+                            font-weight: 300;
+                            font-family: $roboto;
+
+                            @include custom_responsive(0px, 767.9px){
+                                font-size: 14px;
+                                line-height: 25px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            .step_icons{
+
+                display: flex;
+                flex-wrap: wrap;
+                gap: 80px;
+                padding: 0px 10px;
+
+                @include custom_responsive(0px, 767.9px){
+                    gap: 30px;
+                    justify-content: center;
+                }
+
+                .single_step{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.active{
+                        .ellipse{
+                            @include ellipse(45px,$brand_dk,$brand_lt);
+                            i{
+                                color: white;
+                            }
+                        }
+                    }
+                    
+                    .ellipse{
+                        @include ellipse(45px,$brand_dk,white);
+                        
+                        i{
+                            color: $brand_lt;
+                        }
+                    }
+
+                    h5{
+                        font-size: 12px;
+                        line-height: 24px;
+                        color: #333333;  
+                        font-weight: 500;   
+                        margin-top: 15px;                  
+
+                    }
+                }
+            }
+        }
+    }
+}

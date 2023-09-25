@@ -3,6 +3,8 @@
 @import "./core/typography";
 @import "./abstracts/variables";
 @import "./components/buttons";
+@import "./components/ellipse";
+@import "./components/cards";
 @import "./layouts/container";
 @import "./layouts/headers";
 @import "./layouts/footers";
@@ -14,6 +16,7 @@
 @import "./pages/index";
 @import "./pages/about";
 @import "./pages/contact";
+@import "./pages/home";
 
 
 body{

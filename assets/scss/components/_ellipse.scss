@@ -1,0 +1,21 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+
+@mixin ellipse($sq: 45px,$br: red, $bg: orange,){
+    height: $sq;
+    width: $sq;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 50%;
+    border: 1px solid $br;
+    background-color: $bg;
+    transition-duration: .3s;
+
+    &:hover{
+        background-color: $br;
+        border: 1px solid $bg;
+    }
+
+}

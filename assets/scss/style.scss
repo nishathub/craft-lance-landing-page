@@ -3,11 +3,12 @@
 @import "./core/typography";
 @import "./abstracts/variables";
 @import "./components/buttons";
+@import "./layouts/container";
 @import "./layouts/headers";
 @import "./layouts/footers";
 @import "./layouts/nav";
 @import "./layouts/nav_button";
-@import "./layouts/container";
+@import "./layouts/banner";
 @import "./mixins/responsive";
 @import "./mixins/mix_button";
 @import "./pages/index";
@@ -18,7 +19,12 @@
 body{
     // padding: 5px;
     background-color: skyblue;
-    height: 100vh;
-    overflow: hidden;
+    height: auto;
+    
+
+    .page_body{
+        overflow: hidden;
+
+    }
     
 }

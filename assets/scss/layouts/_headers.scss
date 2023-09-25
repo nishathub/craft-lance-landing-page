@@ -5,6 +5,7 @@
 
 #header_id{
 
+    border-bottom: 2px solid $brand_dk;
     .container{
         display: flex;
         justify-content: space-between;
@@ -15,7 +16,12 @@
                 line-height: 60px;
                 color: #636666;
                 font-family: "Basic Sans Serif7"; 
-                text-transform: uppercase;           
+                text-transform: uppercase;       
+                
+                @include custom_responsive(0px, 768px){
+                    font-size: 25px;
+                    line-height: 40px;
+                }
             }
         }
 

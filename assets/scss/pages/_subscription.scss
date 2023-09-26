@@ -1,0 +1,172 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+
+#subscription{
+// background-color: white;
+    .container{
+
+        .subscription_div{
+            margin: 100px 0px;
+            text-align: center;
+
+            @include custom_responsive(0px, 768px){
+                margin: 40px 0px;
+            }
+            .top{
+
+                h2{
+                    @include h_txt();
+                }
+                .choice_box{
+                margin: 50px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include custom_responsive(0px, 576px){
+                        flex-direction: column;
+                        gap: 30px;
+                    }
+
+                    .left{
+                        
+                        @include n_btn($border: transparent, $txt_c: $white, $bg_c: $brand_lt, $radius: 35px 0 0 35px);
+                        letter-spacing: 1px;
+                        font-weight: 400;
+                        width: 200px;
+
+                        @include custom_responsive(0px, 576px){
+                            border-radius: 35px;
+                        }
+                    }
+                    .middle_ellipse{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        @include ellipse($sq: 20px,$br: transparent, $bg: $brand_dk);
+
+                        p{
+                            font-size: 12px;
+                            color: $white;
+                        }
+                    }
+                    .right{
+                        @include n_btn($border: gray, $txt_c: $black, $bg_c: white, $radius: 0 35px 35px 0);
+                        letter-spacing: 1px;
+                        font-weight: 400;
+                        width: 200px;
+
+                        @include custom_responsive(0px, 576px){
+                            border-radius: 35px;
+                        }
+                    }
+                }
+            }
+            
+            .bottom{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 45px;
+                
+
+                
+                .single_package{
+
+                    &.active{
+                       .lower_card a{
+                            background-color: $brand_lt;
+                            color: $white;
+                            border: none;
+                        }
+                    }
+                    .upper_card{
+                        position: relative;
+                        height: 112px;
+                        width: 270px;
+                        padding-top: 25px;
+                        @include border(#ececec);
+                        h4{
+                            @include font($black,14px,$wt:500,$lh: 10px,$ls: 1px);                          
+                            text-transform: uppercase;
+                        }
+
+                        .ellipse_border{
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0px;
+                            transform: translateX(-50%) translateY(50%);
+
+
+                            @include ellipse($sq: 96px,$br: transparent, $bg: #ececec);
+
+                            .price_ellipse{
+                                display: flex;
+                                flex-direction: column;
+                                @include ellipse($sq: 90px,$br: $brand_lt, $bg: white);
+                                h5{
+                                    @include font($black,23px,$wt:500);
+                                }
+                                p{
+                                    @include font(#777777,10px,$wt:300,$stl:italic);
+                                    
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    .lower_card{
+                        height: 285px;
+                        width: 270px;
+                        // @include border(#ececec);
+                        border-width: 0px 1px 1px 1px;
+                        border-style: none solid solid solid;
+                        border-color: transparent #ececec #ececec #ececec;
+                                              
+                        padding-top: 80px;
+                        ul{
+                            margin-bottom: 30px;
+                            li{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 8px;
+
+                                &:nth-child(1),
+                                &:nth-child(3){
+                                    color: $brand_lt;
+                                };
+                                &:nth-child(2),
+                                &:nth-child(4){
+                                    color: red;
+                                };
+                                // i{
+                                //     font-weight: bolder;
+                                // }
+                                P{
+                                    @include font($black,10px,$wt:500,$lh: 30px,$ls: 1px);                          
+                                    text-transform: capitalize;
+                                    
+                                }
+                            }
+                        }
+
+                        a{
+                            @include n_btn($border: #ececec, $txt_c: $black, $bg_c: white, $radius: 20px);
+                            
+                            @include font($black,10px,$wt:500,$lh: 10px,$ls: normal);                          
+                                    text-transform: uppercase;
+                           
+                            
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

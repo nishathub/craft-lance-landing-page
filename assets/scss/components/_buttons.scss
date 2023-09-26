@@ -18,10 +18,17 @@
     color: $txt_c;
     background-color: $bg_c;
     border-radius: $radius;
-    padding: 8px 30px;
+    padding: 12px 30px;
     font-size: 12px;
     font-weight: bold;
-    font-family: roboto;
+    font-family: $roboto;
+    text-align: center;
+    box-sizing: border-box;
+
+    &:hover{
+      background-color: $txt_c ;
+      color: $bg_c;
+    }
   }
   
   @mixin btn_outline($border: red, $bg: transparent){

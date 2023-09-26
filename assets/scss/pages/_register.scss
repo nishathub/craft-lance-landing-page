@@ -130,7 +130,7 @@ background-color: $white;
 
                     &.active{
                         .ellipse{
-                            @include ellipse(45px,$brand_dk,$brand_lt);
+                            @include ellipse(45px,transparent,$brand_lt);
                             i{
                                 color: white;
                             }

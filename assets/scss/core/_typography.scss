@@ -31,14 +31,15 @@
     line-height: 24px;
     text-transform: uppercase;
     color: #333333;
-    font-weight: 400;
+    font-weight: 500;
     font-family: $roboto;
 }
 @mixin f_p_txt(){
+    width: 240px;
     font-size: 12px;
     line-height: 22px;
     color: #777777;
-    font-weight: 300;
+    font-weight: 400;
     font-family: $roboto;  
 }
 @mixin ft_l_txt(){

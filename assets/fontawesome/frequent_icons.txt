@@ -40,3 +40,11 @@ OTHERS FREQUENT:
 <i class="fa-regular fa-envelope"></i>
 <i class="fa-solid fa-location-dot"></i>
 <i class="fa-solid fa-xmark"></i>
+<i class="fa-solid fa-book"></i>
+<i class="fa-solid fa-mug-saucer"></i>
+<i class="fa-brands fa-pagelines"></i>
+<i class="fa-solid fa-folder-open"></i>
+<i class="fa-solid fa-gears"></i>
+<i class="fa-regular fa-paper-plane"></i>
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
+<i class="fa-solid fa-robot"></i>

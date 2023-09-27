@@ -45,6 +45,9 @@
         @include custom_responsive(0px, 576px){
             gap: 0px;
             flex-direction: column;
+            a{
+                line-height: 25px;
+            }
         }
         
         .phone_box{

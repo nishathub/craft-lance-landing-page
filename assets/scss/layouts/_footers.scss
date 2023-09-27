@@ -1,0 +1,129 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+
+#footer_id{
+background-color: rgb(239, 239, 239);
+    .container{
+
+        .footer_div{
+
+            .footer_up{
+                padding: 50px 0px;
+                
+
+                @include custom_responsive(0px, 576px){
+                    padding: 30px 0px;
+                }
+
+                display: flex;
+                flex-wrap: wrap;
+                gap: 35px;
+                justify-content: space-evenly;
+
+                .left{
+                    .letter_div{
+                        text-align: left;
+                        h4{
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $black;
+                            font-weight: 400;   
+                            margin-bottom: 35px;                    
+                        }
+                        p{
+                            width: 336px;
+                            height: 54px;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #333333;
+                            font-weight: 300;
+
+                            @include custom_responsive(0px, 575px){
+                                width:auto ;
+                            }
+                                                    
+                        }
+                        form{
+                            margin-top: 15px;
+                            width: 315px;
+                            height: 45px;
+                            background-color: white;
+                            display: flex;
+                            @include custom_responsive(0px, 575px){
+                                width:60vw ;
+                            }
+                            input{
+                                flex: 1;
+                                &::placeholder{
+                                    font-style: italic;
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                    color: #dedede;                                
+                                }
+    
+                                
+                            }
+    
+                            button{
+    
+                                height: 100%;
+                                width: 57px;
+                                background-color: $brand_lt;
+                                color: $white;
+                                cursor: pointer;
+                                border: none;
+                                
+    
+                                &:hover{
+    
+                                    background-color: $brand_dk;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .right{
+
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 70px;
+
+                    @include custom_responsive(1010px, 1110px){
+                        gap: 30px;
+                    }
+                    @include custom_responsive(600px, 768px){
+                        gap: 30px;
+                    }
+
+                    .quick_links,
+                    .legal,
+                    .information{
+    
+                        h4{
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $black;
+                            font-weight: 400;
+                            margin-bottom: 35px;
+                        }
+    
+                        ul{
+    
+                            li{
+                                @include ft_l_txt();
+                            }
+                        }
+                    }
+
+                }
+                 
+            }
+
+        }
+    }
+}

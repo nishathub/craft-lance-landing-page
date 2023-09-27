@@ -8,11 +8,11 @@ background-color: $white;
     .container{
 
         .service_div{
-            margin: 100px 0px;
+            padding: 100px 0px;
             text-align: center;
 
             @include custom_responsive(0px,768px){
-                margin: 40px 0px;
+                padding: 40px 0px;
             }
             h2{
                 @include h_txt();

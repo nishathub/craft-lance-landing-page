@@ -1,0 +1,44 @@
+@import '../abstracts/variables';
+@import '../mixins/common_mix';
+@import '../mixins/responsive';
+
+#copy_right{
+    border-top: 1px solid #e1e2e3;
+    background-color: rgb(239, 239, 239);
+    .container{
+
+        .copyright_div{
+            padding: 25px 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            @include custom_responsive(0px, 576px){
+                padding: 10px 0px 30px 0px;
+                flex-direction: column;
+            }
+
+            .left{
+                h2{
+                    font-size: 20px;
+                    line-height: 60px;
+                    color: #636666;
+                    font-family: "Basic Sans Serif7"; 
+                    text-transform: uppercase;                       
+                }
+            }
+
+            .right{
+
+                p{
+                    font-size: 11px;
+                    line-height: 17px;
+                    color: #777777;
+                    font-weight: 300;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
